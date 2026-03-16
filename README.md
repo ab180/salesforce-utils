@@ -5,16 +5,17 @@ ab180 Salesforce 연동용 타입 및 유틸 파일 모음.
 
 ---
 
-## 빠른 시작
-
-### 1. 파일 복사
+## 1단계: 파일 다운로드
 
 ```bash
 curl -o salesforce-types.ts https://raw.githubusercontent.com/ab180/salesforce-utils/main/salesforce-types.ts
 curl -o salesforce.ts https://raw.githubusercontent.com/ab180/salesforce-utils/main/salesforce.ts
 ```
 
-### 2. 환경변수 설정
+Node.js 18+ 필요. 외부 패키지 없이 내장 `fetch`만 사용합니다.
+환경변수 로딩에 `dotenv`를 쓴다면: `npm install dotenv`
+
+## 2단계: 환경변수 설정
 
 `.env`에 추가:
 
@@ -27,45 +28,28 @@ SALESFORCE_PASSWORD=
 SALESFORCE_SECURITY_TOKEN=
 ```
 
-### 3. 의존성 설치
+## 3단계: AI에게 전달하기
 
-`salesforce.ts`는 외부 패키지 없이 Node.js 내장 `fetch`만 사용합니다 (Node 18+).
-환경변수 로딩에 `dotenv`를 쓴다면:
-
-```bash
-npm install dotenv
-```
-
----
-
-## 포함된 Salesforce 오브젝트
-
-`salesforce-types.ts`에 다음 오브젝트의 타입이 정의돼 있습니다:
-
-- `Account`, `Contact`, `Opportunity`, `Lead`
-- `Contract`, `Contract_Product__c`, `Contract_Org__c`, `Contract_Entry__c`, `Contract_Contact_Role_custom__c`
-- `Invoice__c`, `Invoice_Log__c`
-- `Org__c`, `App__c`
-- `AB_Member__c`
-- `Amplitude_Scale_Program_License__c`
-- 위 오브젝트들이 참조하는 오브젝트 (reference 필드 따라 자동 포함)
-
----
-
-## 타입 업데이트
-
-GitHub Actions가 매일 09:00 KST에 자동으로 `salesforce-types.ts`를 재생성하고 커밋합니다.
-수동으로 트리거하려면 [Actions 탭](https://github.com/ab180/salesforce-utils/actions) → "Generate Salesforce Types" → "Run workflow".
-
----
-
-## AI에게 전달하기
-
-아래 코드 블록 전체를 복사해서 AI에게 붙여넣으세요.
+아래 블록 전체를 복사해서 AI에게 붙여넣으세요. AI가 모든 API를 이해하고 바로 코드를 작성할 수 있습니다.
 
 ```
 이 프로젝트는 Salesforce와 연동합니다.
 두 파일을 사용합니다: salesforce-types.ts, salesforce.ts
+
+파일 다운로드 (터미널에서 실행):
+curl -o salesforce-types.ts https://raw.githubusercontent.com/ab180/salesforce-utils/main/salesforce-types.ts
+curl -o salesforce.ts https://raw.githubusercontent.com/ab180/salesforce-utils/main/salesforce.ts
+
+환경변수 (.env 파일에 추가):
+SALESFORCE_END_POINT=
+SALESFORCE_CLIENT_ID=
+SALESFORCE_CLIENT_SECRET=
+SALESFORCE_USERNAME=
+SALESFORCE_PASSWORD=
+SALESFORCE_SECURITY_TOKEN=
+
+의존성: Node.js 18+ (fetch 내장). 외부 패키지 없음.
+환경변수 로딩에 dotenv를 쓴다면: npm install dotenv
 
 ---
 
@@ -148,3 +132,7 @@ const result = await sf.postRecord<Opportunity>('Opportunity', {
 // 수정
 await sf.patchRecordById<Contract>('Contract', contractId, { Status: 'Activated' });
 ```
+
+---
+
+레포 관리(메인테이너)는 [SETUP.md](./SETUP.md)를 참고하세요.
