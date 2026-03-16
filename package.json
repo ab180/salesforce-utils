@@ -1,0 +1,12 @@
+{
+  "name": "salesforce-utils",
+  "private": true,
+  "scripts": {
+    "generate-types": "npx ts-node generate-salesforce-types.ts"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.2",
+    "ts-node": "^10.9.2",
+    "dotenv": "^16.0.0"
+  }
+}
