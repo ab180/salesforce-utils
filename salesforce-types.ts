@@ -1041,9 +1041,9 @@ export interface Contract_Product__c {
   Official_Name__c: string;
   Deal_Number__c?: string;
   PricebookEntryID__c?: string;
-  ABR_Data_Point_Per_Unit__c?: '100' | '200' | '300' | '400' | '500' | '600' | '1000' | '2000' | '3000' | '4000' | '50' | '1200' | '468.75' | '150';
+  ABR_Data_Point_Per_Unit__c?: '100' | '200' | '300' | '400' | '500' | '600' | '1000' | '2000' | '3000' | '4000' | '50' | '1200' | '468.75' | '150' | '750';
   ABR_Total_Data_Point__c?: number;
-  AFX_Data_Point_Per_Unit__c?: '100' | '200' | '300' | '400' | '500' | '600' | '1000' | '2000' | '3000' | '4000' | '50' | '1200' | '468.75' | '150';
+  AFX_Data_Point_Per_Unit__c?: '100' | '200' | '300' | '400' | '500' | '600' | '1000' | '2000' | '3000' | '4000' | '50' | '1200' | '468.75' | '150' | '750';
   AFX_Total_Data_Point__c?: number;
   Datapoint_Applied__c: boolean;
 }
