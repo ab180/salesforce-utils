@@ -417,7 +417,7 @@ export interface Opportunity {
   CSM_Assign_Request_Status__c?: string;
   Consulting_PM__c: string;
   Consulting_PM__r: AB_Member__c | null;
-  ABR_Plan__c?: 'Growth' | 'Enterprise' | 'Deeplink';
+  ABR_Plan__c?: 'Deeplink' | 'Core' | 'Growth' | 'Enterprise';
   Won_Reason_Category__c?: '사용자 친화적 UI/UX (User-Friendly Design)' | '데이터 정합성 (Reliable and Trustworthy Data)' | '타 솔루션과의 연동성 (Seamless Integration with Other SaaS Tools)' | '가격 경쟁력 (Competitive Pricing)' | '체계적인 지원 시스템 (Reliable Support System)' | '제품 브랜드 신뢰도 (Strong Product Brand Trust)' | 'AB180 브랜드 신뢰도 (AB180 Brand Trust)' | '광고 채널 연동성 (Seamless Integration with Advertising Channels)' | '영업 네트워크  (Sales Network)' | '상세한 가이드 문서 (Comprehensive Documentation)' | '파트너사 추천 (Partner Recommendations)' | '동종 업계 레퍼런스 (Industry Peer References)' | '기타 (Others)';
   Lost_Reason_Category__c?: '솔루션 기능의 제한 (Feature Limitation)' | '가격 경쟁력 부족 (Lack of Competitive Pricing)' | '특수 요구사항 충족 불가 (Inability to Address Specific Requirements)' | '고객 내부 사정 (Internal Client Circumstances)' | '고객사 개발 리소스 부족 (Lack of Client Development Resources)' | '지원 체계 신뢰 부족 (Support System Concerns)' | '제품 브랜드 신뢰도 부족 (Insufficient Product Brand Trust)' | 'AB180 브랜드 신뢰도 부족 (Insufficient AB180 Brand Trust)' | '광고 채널 연동 문제 (Ad Channel Incompatibility)' | '기존 시스템/제품에 대한 익숙함 (Preference for Existing Solutions)' | '도입 필요성 부족 (Lack of Necessity Perception)' | '파트너사 부정적 피드백 (Negative Partner Feedback)' | '동종 업계 레퍼런스 부족 (Lack of Industry Peer References)' | '연락두절 (No Show)' | '기타 (Others)';
   Contact_Count_PIC__c?: number;
@@ -741,7 +741,7 @@ export interface Contract {
   Prev_Contract__r: Contract | null;
   Title__c?: string;
   Prev_Deal_Closed_Date__c?: string;
-  ABR_Platform__c?: 'Growth' | 'Enterprise' | 'Deeplink';
+  ABR_Platform__c?: 'Deeplink' | 'Core' | 'Growth' | 'Enterprise';
   Platform_Detail__c?: string;
   Add_on_Detail__c?: string;
   POC_End_Date__c?: string;
@@ -1191,7 +1191,7 @@ export interface Lead {
   Company_Info_Reference__c?: string;
   Company_Info_Request__c: boolean;
   MGS_Attributed__c?: 'Yes' | 'No';
-  ABR_Plan__c?: 'Growth' | 'Enterprise' | 'Deeplink';
+  ABR_Plan__c?: 'Deeplink' | 'Core' | 'Growth' | 'Enterprise';
   Solutions_in_Use__c?: string;
   Last_Deliverability_Test_Date__c?: string;
   Email_Deliverability__c?: 'deliverable' | 'risky' | 'undeliverable' | 'unknown';
